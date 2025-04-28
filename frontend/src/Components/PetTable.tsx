@@ -5,11 +5,13 @@ interface Owner {
   name: string;
 }
 
+
 interface Pet {
   id: string;
   name: string;
   owner: Owner;
 }
+  
 
 const PetTable = () => {
   const [pets, setPets] = useState<Pet[]>([]);
@@ -17,6 +19,7 @@ const PetTable = () => {
   const showPets = async () => {
     const response = await fetch("http://localhost:5120/pets");
     const data = await response.json();
+    console.log(data)
     setPets(data);
   };
 

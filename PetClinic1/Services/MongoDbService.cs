@@ -44,6 +44,16 @@ namespace PetClinic1.Services
 
         public async Task AddPetAsync(Pet pet)
         {
+            //i can manipulate pet object 
+            //pet photo will come from a fetch or axios 
+            //pet.photo is defined as cat photo
+            //pet.photo ??????????????????*
+            //how to use enpoint http://localhost:5043/api/Cloudinary/all
+            //use HTTPCLIENT post
+            //get response from server
+            //use response.url for photo 
+            //add pet.photo
+            
             await _pets.InsertOneAsync(pet);
         }
 
@@ -104,16 +114,6 @@ namespace PetClinic1.Services
         {
             return await _pets.Find(p => p.Vaccinations.Any()).ToListAsync();
         }
-
-
-
-
-
-
-
-
-
-
     }
 
     //delete pet name and owner name request

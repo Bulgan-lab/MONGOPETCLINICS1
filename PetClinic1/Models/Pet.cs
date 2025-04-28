@@ -16,6 +16,8 @@ namespace PetClinic1.Models
         [Required]
         public string? Name { get; set; }
 
+        public string PhotoUrl {get;set;}="https://res.cloudinary.com/dlqvroicn/image/upload/v1744274211/samplephoto.jpg";
+
         [Required]
         public string? Species { get; set; }
 
